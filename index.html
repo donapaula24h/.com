@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dona Paula Trufas</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  
+
+<header class="topo">
+    <p class="boas-vindas">
+        📱 <a href="https://wa.me/5588988170526" target="_blank">WhatsApp (88) 9 8817-0526</a>
+          Sejam Bem-Vindos(a)!
+    </p>
+</header>
+
+<section class="slider">
+<img class="slide ativo" src="sld1.png">
+<img class="slide" src="sld2.png">
+<img class="slide" src="sld3.png">
+</section>
+
+<div class="busca">
+<input type="text" id="pesquisa" placeholder="Pesquisar trufas...">
+</div>
+
+<div class="grid" id="produtos"></div>
+
+<button id="btnCarrinho" onclick="abrirCarrinho()">🛒 <span id="contador">0</span></button>
+
+<div id="carrinho" class="carrinho">
+<div class="cabecalho">
+<h2>Seu Pedido</h2>
+<button onclick="abrirCarrinho()">✖</button>
+</div>
+
+<div id="itens"></div>
+
+<h3>Total: R$ <span id="total">0,00</span></h3>
+
+<h3>Entrega</h3>
+<input id="nome" placeholder="Nome">
+<input id="telefone" placeholder="Telefone">
+<input id="rua" placeholder="Rua">
+<input id="numero" placeholder="Número">
+<input id="bairro" placeholder="Bairro">
+<textarea id="obs" placeholder="Cidade/obs"></textarea>
+<h3>Calcular Frete</h3>
+
+<input id="cep" placeholder="Digite seu CEP">
+
+<button onclick="calcularFrete()">Calcular Frete</button>
+
+<p id="freteTexto">Frete: R$ 0,00</p>
+
+<h3>Total + Frete: R$ <span id="totalGeral">0,00</span></h3>
+<button class="finalizar" onclick="finalizarPedido()">Finalizar Pedido</button>
+<button class="limpar" onclick="limparCarrinho()">Limpar Carrinho</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
