@@ -1,65 +1,193 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dona Paula Trufas</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  
 
 <header class="topo">
-    <p class="boas-vindas">
-        📱 <a href="https://wa.me/5588988170526" target="_blank">WhatsApp (88) 9 8817-0526</a>
-          Sejam Bem-Vindos(a)!
-    </p>
+
+    <div class="logo-area">
+
+        <img src="logo.png" class="logo" alt="Dona Paula">
+
+        <h1>Dona Paula Trufas</h1>
+
+        <p class="slogan">
+            🍫 Feitas com amor e muito sabor
+        </p>
+
+    </div>
+
+    <a class="whatsapp-topo"
+       href="https://wa.me/5588988170526"
+       target="_blank">
+
+        📱 WhatsApp
+
+    </a>
+
 </header>
 
+<section class="hero">
+
+    <h2>As Melhores Trufas Artesanais da Região</h2>
+
+    <p>
+        Escolha seus sabores favoritos e receba em casa.
+    </p>
+
+</section>
+
 <section class="slider">
-<img class="slide ativo" src="sld1.png">
-<img class="slide" src="sld2.png">
-<img class="slide" src="sld3.png">
+
+    <img class="slide ativo" src="sld1.png">
+    <img class="slide" src="sld2.png">
+    <img class="slide" src="sld3.png">
+
+</section>
+
+<section class="vantagens">
+
+    <div class="vantagem">
+        🍫
+        <span>Trufas Artesanais</span>
+    </div>
+
+    <div class="vantagem">
+        🚚
+        <span>Entrega Rápida</span>
+    </div>
+
+    <div class="vantagem">
+        ❤️
+        <span>Feitas com Amor</span>
+    </div>
+
 </section>
 
 <div class="busca">
-<input type="text" id="pesquisa" placeholder="Pesquisar trufas...">
+
+    <input
+        type="text"
+        id="pesquisa"
+        placeholder="🔍 Pesquisar sabor..."
+    >
+
 </div>
+
+<h2 class="titulo-produtos">
+    Nossas Delícias
+</h2>
 
 <div class="grid" id="produtos"></div>
 
-<button id="btnCarrinho" onclick="abrirCarrinho()">🛒 <span id="contador">0</span></button>
+<button id="btnCarrinho" onclick="abrirCarrinho()">
+
+    🛒 <span id="contador">0</span>
+
+</button>
 
 <div id="carrinho" class="carrinho">
-<div class="cabecalho">
-<h2>Seu Pedido</h2>
-<button onclick="abrirCarrinho()">✖</button>
+
+    <div class="cabecalho">
+
+        <h2>Seu Pedido</h2>
+
+        <button onclick="abrirCarrinho()">
+            ✖
+        </button>
+
+    </div>
+
+    <div id="itens"></div>
+
+    <h3>
+        Total: R$
+        <span id="total">0,00</span>
+    </h3>
+
+    <h3>Dados para Entrega</h3>
+
+    <input id="nome" placeholder="Seu Nome">
+
+    <input id="telefone" placeholder="WhatsApp">
+
+    <input id="rua" placeholder="Rua">
+
+    <input id="numero" placeholder="Número">
+
+    <input id="bairro" placeholder="Bairro">
+
+    <textarea
+        id="obs"
+        placeholder="Cidade / Observação">
+    </textarea>
+
+    <h3>Frete</h3>
+
+    <input
+        id="cep"
+        placeholder="Digite seu CEP"
+    >
+
+    <button class="frete-btn"
+            onclick="calcularFrete()">
+        Calcular Frete
+    </button>
+
+    <p id="freteTexto">
+        Frete: R$ 0,00
+    </p>
+
+    <h3>
+        Total + Frete:
+        R$ <span id="totalGeral">0,00</span>
+    </h3>
+
+    <button class="finalizar"
+            onclick="finalizarPedido()">
+
+        Finalizar Pedido
+
+    </button>
+
+    <button class="limpar"
+            onclick="limparCarrinho()">
+
+        Limpar Carrinho
+
+    </button>
+
 </div>
 
-<div id="itens"></div>
+<footer class="rodape">
 
-<h3>Total: R$ <span id="total">0,00</span></h3>
+    <h3>Dona Paula Trufas</h3>
 
-<h3>Entrega</h3>
-<input id="nome" placeholder="Nome">
-<input id="telefone" placeholder="Telefone">
-<input id="rua" placeholder="Rua">
-<input id="numero" placeholder="Número">
-<input id="bairro" placeholder="Bairro">
-<textarea id="obs" placeholder="Cidade/obs"></textarea>
-<h3>Calcular Frete</h3>
+    <p>
+        Feitas artesanalmente com muito carinho.
+    </p>
 
-<input id="cep" placeholder="Digite seu CEP">
+    <a href="https://wa.me/5588988170526">
+        📱 Fazer Pedido
+    </a>
 
-<button onclick="calcularFrete()">Calcular Frete</button>
+    <p>
+        © 2026 Dona Paula Trufas
+    </p>
 
-<p id="freteTexto">Frete: R$ 0,00</p>
-
-<h3>Total + Frete: R$ <span id="totalGeral">0,00</span></h3>
-<button class="finalizar" onclick="finalizarPedido()">Finalizar Pedido</button>
-<button class="limpar" onclick="limparCarrinho()">Limpar Carrinho</button>
-</div>
+</footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
